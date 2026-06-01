@@ -1,0 +1,6 @@
+{
+  "name": "Mumbai SkyGrid 2045",
+  "description": "Futuristic smart city command center and analytics platform monitoring anti-gravity flying taxi networks across Mumbai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Palantir / Linear Inspired Enterprise Panels */
+.glass-panel {
+  background-color: #0d1321;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.glass-panel-hover:hover {
+  background-color: #121a2d;
+  border-color: #334155;
+  transition: all 0.15s ease-in-out;
+}
+
+/* Custom Accessibility Focus Outline */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  ring-width: 2px;
+  ring-color: #06b6d4;
+  ring-offset-width: 2px;
+  ring-offset-color: #030712;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070a13;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #33517c;
+}
+
+/* ==========================================================================
+   Tactical Command Center: True-Black High-Contrast Mode Overrides
+   ========================================================================== */
+
+/* Outer body & main layouts */
+.theme-true-black {
+  background-color: #000000 !important;
+  color: #f8fafc !important; /* Pure high contrast slate white */
+}
+
+/* Overriding all slate/indigo/blue custom background hexes discovered via grep */
+.theme-true-black,
+.theme-true-black aside,
+.theme-true-black header,
+.theme-true-black main,
+.theme-true-black .bg-\[\#070913\],
+.theme-true-black .bg-\[\#090c16\],
+.theme-true-black .bg-\[\#060810\],
+.theme-true-black .bg-\[\#0d1321\],
+.theme-true-black .bg-\[\#0f1423\],
+.theme-true-black .bg-\[\#0b0f19\],
+.theme-true-black .bg-\[\#080a13\],
+.theme-true-black .bg-\[\#080b13\],
+.theme-true-black .bg-\[\#0a0d16\],
+.theme-true-black .bg-\[\#0e1220\],
+.theme-true-black .bg-\[\#101626\],
+.theme-true-black .bg-\[\#090d16\],
+.theme-true-black .bg-\[\#101423\],
+.theme-true-black .bg-\[\#111c2a\],
+.theme-true-black .bg-\[\#0a0d17\],
+.theme-true-black .bg-\[\#0a0f1d\],
+.theme-true-black .bg-\[\#0c111e\],
+.theme-true-black .bg-\[\#0b111e\],
+.theme-true-black .bg-\[\#0c1424\],
+.theme-true-black .bg-\[\#05070a\],
+.theme-true-black .bg-\[\#111827\],
+.theme-true-black .bg-\[\#0a0d18\],
+.theme-true-black .bg-slate-950,
+.theme-true-black .bg-slate-900,
+.theme-true-black .bg-slate-950\/90,
+.theme-true-black .bg-slate-950\/80,
+.theme-true-black .glass-panel {
+  background-color: #000000 !important;
+  background-image: none !important; /* Remove radial visual gradients for raw, authentic tactical OLED layouts */
+}
+
+/* Overriding card borders for high visibility outlining */
+.theme-true-black .border-slate-900,
+.theme-true-black .border-slate-800,
+.theme-true-black .border-slate-850,
+.theme-true-black .border-slate-700,
+.theme-true-black .border-slate-950,
+.theme-true-black .border,
+.theme-true-black .border-t,
+.theme-true-black .border-b,
+.theme-true-black .border-l,
+.theme-true-black .border-r,
+.theme-true-black .glass-panel {
+  border-color: #475569 !important; /* Premium stark slate grey borders */
+}
+
+/* Soft secondary headers/tables */
+.theme-true-black .bg-slate-900\/40,
+.theme-true-black .bg-slate-950\/40,
+.theme-true-black .bg-[#0a0d16]/45 {
+  background-color: #111827 !important; /* Dark charcoal grey to stand out from pitch black */
+  border-color: #475569 !important;
+}
+
+/* Hover effects adapted for pitch black command room comfort */
+.theme-true-black .hover\:bg-slate-900\/40:hover,
+.theme-true-black .hover\:bg-slate-900:hover,
+.theme-true-black .glass-panel-hover:hover {
+  background-color: #111827 !important;
+  border-color: #64748b !important;
+}
+
+/* Higher contrast state for text tags across all dashboard segments */
+.theme-true-black .text-slate-400,
+.theme-true-black .text-slate-500,
+.theme-true-black .text-slate-450,
+.theme-true-black .text-slate-550 {
+  color: #94a3b8 !important; /* High contrast text gray */
+}
+
+.theme-true-black .text-slate-300 {
+  color: #e2e8f0 !important; /* Off-white for body copy readable at 100% OLED contrast */
+}
+
+.theme-true-black .text-slate-350 {
+  color: #cbd5e1 !important;
+}
+
+/* Chart and tooltip overlays */
+.theme-true-black .recharts-default-tooltip {
+  background-color: #000000 !important;
+  border: 1.5px solid #64748b !important;
+}
+
+.theme-true-black .recharts-cartesian-grid line {
+  stroke: #334155 !important; /* Strong gridline visibility */
+  stroke-dasharray: 2 2;
+}
+
+/* Scrollbars customized for tactical OLED contrast */
+.theme-true-black ::-webkit-scrollbar-thumb {
+  background: #475569 !important;
+}
+
+.theme-true-black ::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+
+/* ==========================================================================
+   Tactical Command Center: True-Black High-Contrast Mode Overrides
+   ========================================================================== */
+
+/* Outer body & main layouts */
+.theme-true-black {
+  background-color: #000000 !important;
+  color: #f8fafc !important; /* Pure high contrast slate white */
+}
+
+/* Overriding all slate/indigo/blue custom background hexes discovered via grep */
+.theme-true-black,
+.theme-true-black aside,
+.theme-true-black header,
+.theme-true-black main,
+.theme-true-black .bg-\[\#070913\],
+.theme-true-black .bg-\[\#090c16\],
+.theme-true-black .bg-\[\#060810\],
+.theme-true-black .bg-\[\#0d1321\],
+.theme-true-black .bg-\[\#0f1423\],
+.theme-true-black .bg-\[\#0b0f19\],
+.theme-true-black .bg-\[\#080a13\],
+.theme-true-black .bg-\[\#080b13\],
+.theme-true-black .bg-\[\#0a0d16\],
+.theme-true-black .bg-\[\#0e1220\],
+.theme-true-black .bg-\[\#101626\],
+.theme-true-black .bg-\[\#090d16\],
+.theme-true-black .bg-\[\#101423\],
+.theme-true-black .bg-\[\#111c2a\],
+.theme-true-black .bg-\[\#0a0d17\],
+.theme-true-black .bg-\[\#0a0f1d\],
+.theme-true-black .bg-\[\#0c111e\],
+.theme-true-black .bg-\[\#0b111e\],
+.theme-true-black .bg-\[\#0c1424\],
+.theme-true-black .bg-\[\#05070a\],
+.theme-true-black .bg-\[\#111827\],
+.theme-true-black .bg-\[\#0a0d18\],
+.theme-true-black .bg-slate-950,
+.theme-true-black .bg-slate-900,
+.theme-true-black .bg-slate-950\/90,
+.theme-true-black .bg-slate-950\/80,
+.theme-true-black .glass-panel {
+  background-color: #000000 !important;
+  background-image: none !important; /* Remove radial visual gradients for raw, authentic tactical OLED layouts */
+}
+
+/* Overriding card borders for high visibility outlining */
+.theme-true-black .border-slate-900,
+.theme-true-black .border-slate-800,
+.theme-true-black .border-slate-850,
+.theme-true-black .border-slate-700,
+.theme-true-black .border-slate-950,
+.theme-true-black .border,
+.theme-true-black .border-t,
+.theme-true-black .border-b,
+.theme-true-black .border-l,
+.theme-true-black .border-r,
+.theme-true-black .glass-panel {
+  border-color: #475569 !important; /* Premium stark slate grey borders */
+}
+
+/* Soft secondary headers/tables */
+.theme-true-black .bg-slate-900\/40,
+.theme-true-black .bg-slate-950\/40,
+.theme-true-black .bg-[#0a0d16]/45 {
+  background-color: #111827 !important; /* Dark charcoal grey to stand out from pitch black */
+  border-color: #475569 !important;
+}
+
+/* Hover effects adapted for pitch black command room comfort */
+.theme-true-black .hover\:bg-slate-900\/40:hover,
+.theme-true-black .hover\:bg-slate-900:hover,
+.theme-true-black .glass-panel-hover:hover {
+  background-color: #111827 !important;
+  border-color: #64748b !important;
+}
+
+/* Higher contrast state for text tags across all dashboard segments */
+.theme-true-black .text-slate-400,
+.theme-true-black .text-slate-500,
+.theme-true-black .text-slate-450,
+.theme-true-black .text-slate-550 {
+  color: #94a3b8 !important; /* High contrast text gray */
+}
+
+.theme-true-black .text-slate-300 {
+  color: #e2e8f0 !important; /* Off-white for body copy readable at 100% OLED contrast */
+}
+
+.theme-true-black .text-slate-350 {
+  color: #cbd5e1 !important;
+}
+
+/* Chart and tooltip overlays */
+.theme-true-black .recharts-default-tooltip {
+  background-color: #000000 !important;
+  border: 1.5px solid #64748b !important;
+}
+
+.theme-true-black .recharts-cartesian-grid line {
+  stroke: #334155 !important; /* Strong gridline visibility */
+  stroke-dasharray: 2 2;
+}
+
+/* Scrollbars customized for tactical OLED contrast */
+.theme-true-black ::-webkit-scrollbar-thumb {
+  background: #475569 !important;
+}
+
+.theme-true-black ::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
