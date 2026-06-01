@@ -9,6 +9,8 @@
 
 Mumbai SkyGrid 2045 is a high-performance, mission-critical operations and intelligence control platform designed to manage, coordinate, and optimize autonomous anti-gravity flying vehicle networks (eVTOL / VTOL) across the Mumbai metropolitan area. Engineered for municipal authorities, aeronautics corporations, safety agencies, and commercial fleet operators, it serves as an end-to-end Airspace Command Suite.
 
+![Mumbai SkyGrid 2045 Dashboard](docs/assets/screenshots/hero_screenshot.png)
+
 ---
 
 ## 🚀 TABLE OF CONTENTS
@@ -25,6 +27,8 @@ Mumbai SkyGrid 2045 is a high-performance, mission-critical operations and intel
 ---
 
 ## 🏗️ PLATFORM ARCHITECTURE & DESIGN
+
+![Architecture Diagram](docs/assets/screenshots/architecture_diagram.png)
 
 ### Technology Stack
 - **Frontend Core**: React 19, TypeScript 5.8 (Strict type verification).
